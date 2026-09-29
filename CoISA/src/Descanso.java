@@ -9,10 +9,15 @@ public class Descanso {
     public void defineHorasDescanso(int hDescanso) {
         this.hDescanso = hDescanso;
     }
-    public void defineNumeroSemana(int nSemana){
+    public void defineNumeroSemanas(int nSemana){
         this.nSemana = nSemana;
     }
     public String getStatusGeral(){
-        return "Descanso: " + this.hDescanso + "\n" + "Semanas: " + this.nSemana;
+        if (this.hDescanso/this.nSemana >= 26){
+            return "descansado";
+        }
+        else {
+            return "cansado";
+        }
     }
 }
