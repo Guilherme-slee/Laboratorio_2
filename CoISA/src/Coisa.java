@@ -1,4 +1,4 @@
-package lab2;
+
 
 public class Coisa {
     public static void main(String[] args) {
@@ -69,5 +69,3 @@ public class Coisa {
         System.out.println(meusResumos.temResumo("Objetos"));
     }
 }
-
-Exibindo Coisa.java…
