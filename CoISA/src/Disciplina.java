@@ -23,7 +23,7 @@ public class Disciplina {
         this.horas += horas;
     }
     public void cadastraNota(int nota, double valorNota){
-        this.notas[nota] = valorNota;
+        this.notas[nota - 1] = valorNota;
     }
     public boolean aprovado(){
         if (media() >= 7.0){
@@ -32,7 +32,7 @@ public class Disciplina {
         return false;
     }
     public String toString(){
-       return "Disciplina: " + this.nomeDisciplina + "\n" + "Horas: " + this.horas + "\n" + "Média: " + media() + "\n" + "Notas: " + Arrays.toString(this.notas);
+       return this.nomeDisciplina + " " + this.horas + " " + media() + " " + Arrays.toString(this.notas);
     }
 }
 

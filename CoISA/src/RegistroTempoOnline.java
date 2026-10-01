@@ -14,7 +14,7 @@ public class RegistroTempoOnline {
         this.tempoEsperado = tempoEsperado;
     }
     public void adicionaTempoOnline(int tempoInvestido){
-        this.tempoInvestido = tempoInvestido;
+        this.tempoInvestido += tempoInvestido;
     }
     public boolean atingiuMetaTempoOnline(){
         if (tempoInvestido >= tempoEsperado){
@@ -23,6 +23,6 @@ public class RegistroTempoOnline {
         return false;
     }
     public String toString(){
-    return this.nomeDisciplina + this.tempoInvestido + "/" + this.tempoEsperado;
+    return this.nomeDisciplina + " " + this.tempoInvestido + "/" + this.tempoEsperado;
     }
 }
