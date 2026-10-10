@@ -26,11 +26,9 @@ public class Disciplina {
         this.notas[nota - 1] = valorNota;
     }
     public boolean aprovado(){
-        if (media() >= 7.0){
-            return true;
-        }
-        return false;
+        return media() >= 7.0;
     }
+    @Override
     public String toString(){
        return this.nomeDisciplina + " " + this.horas + " " + media() + " " + Arrays.toString(this.notas);
     }

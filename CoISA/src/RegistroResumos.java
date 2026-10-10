@@ -17,13 +17,13 @@ public class RegistroResumos {
     }
 
     public void adiciona(String tema, String resumo){
-        if (id > this.temas.length){
-            id = 0;
-        }
         if (!temResumo(tema)){
             this.temas[id] = tema;
             this.resumos[id] = tema + ": " + resumo;
             id += 1;
+            if (id >= this.temas.length){
+                id = 0;
+            }
         }
     }
     public String[] pegaResumos(){
@@ -43,13 +43,13 @@ public class RegistroResumos {
         return cont;
     }
     public String imprimeResumos(){
-        String str = "-" + " " + conta() + " " + "resumo(s) cadastrado(s)" + "\n";
+        String str = "- " + conta() + " " + "resumo(s) cadastrado(s)" + "\n";
         for (int i = 0; i < this.pegaResumos().length; i++){
             if (i == 0){
-                str += "-" + " " + this.temas[i];
+                str += "- " + this.temas[i];
             }
             else {
-                str += " "+ "|" + " " + this.temas[i];
+                str += " | " + this.temas[i];
             }
 
         }

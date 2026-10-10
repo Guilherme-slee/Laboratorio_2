@@ -17,11 +17,9 @@ public class RegistroTempoOnline {
         this.tempoInvestido += tempoInvestido;
     }
     public boolean atingiuMetaTempoOnline(){
-        if (tempoInvestido >= tempoEsperado){
-            return true;
-        }
-        return false;
+       return tempoInvestido >= tempoEsperado;
     }
+    @Override
     public String toString(){
     return this.nomeDisciplina + " " + this.tempoInvestido + "/" + this.tempoEsperado;
     }
