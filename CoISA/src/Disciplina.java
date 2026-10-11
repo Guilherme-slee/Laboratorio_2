@@ -4,21 +4,38 @@ public class Disciplina {
     private String nomeDisciplina;
     private int horas;
     private double[] notas;
+    private int[] pesos = new int[]{1, 1, 1, 1};
 
     public Disciplina(String nomeDisciplina){
         this.nomeDisciplina = nomeDisciplina;
         this.horas = 0;
-        this.notas = new double[] {0.0, 0.0, 0.0, 0.0};
+        this.notas = new double[4];
     }
+    public Disciplina(String nomeDisciplina, int qNotas){
+        this.nomeDisciplina = nomeDisciplina;
+        this.horas = 0;
+        this.notas = new double[qNotas];
+        this.pesos = new int[qNotas];
+        Arrays.fill(pesos,1);
+    }
+    public Disciplina(String nomeDisciplina, int qNotas, int[] pesos){
+        this.nomeDisciplina = nomeDisciplina;
+        this.horas = 0;
+        this.notas = new double[qNotas];
+        this.pesos = pesos;
+    }
+
     private double media(){
-        double som = 0;
-        int cont = 0;
+        double soma = 0.0;
+        int somaPeso = 0;
         for (int i = 0; i < this.notas.length; i++){
-            cont +=1;
-            som += this.notas[i];
+            soma += pesos[i]*notas[i];
+            somaPeso += pesos[i];
         }
-        return som/cont;
+        return soma/somaPeso;
     }
+
+
     public void cadastraHoras(int horas){
         this.horas += horas;
     }

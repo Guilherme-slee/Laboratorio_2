@@ -1,4 +1,4 @@
-
+import java.util.Arrays;
 
 public class Coisa {
     public static void main(String[] args) {
@@ -67,5 +67,6 @@ public class Coisa {
         System.out.println(meusResumos.imprimeResumos());
         System.out.println(meusResumos.temResumo("Classes"));
         System.out.println(meusResumos.temResumo("Objetos"));
+
     }
 }
