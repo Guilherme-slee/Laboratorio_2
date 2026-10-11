@@ -1,14 +1,14 @@
 /**
- * Representação do estado do descanso de uma,
+ * Representação do estado do descanso de um usuario,
  * considerado a relação entre horas de descanso e a quantidade de semanas.
  */
 public class Descanso {
     /**
-     * Quantidade de horas descansando,sem considerar horas de sono(inteiro).
+     * Quantidade de horas descansando,sem considerar horas de sono.
      */
     private int hDescanso;
     /**
-     * Quantidade de semanas(inteiro).
+     * Quantidade de semanas.
      */
     private int nSemana;
 
