@@ -35,8 +35,8 @@ public class Disciplina {
     }
 
     /**
-     * Construtor com objetivo de definir o nome da disciplina, e a quantidade de notas e pesos
-     * com pesos pre determinadas(cada peso valendo 1).
+     * Construtor com objetivo de definir o nome da disciplina, a quantidade de notas e pesos,
+     * e com pesos pre determinadas(cada peso valendo 1).
      * @param nomeDisciplina define nome da disciplina.
      * @param qNotas define a quantidade de notas e pesos.
      *

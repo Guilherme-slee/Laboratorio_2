@@ -1,15 +1,16 @@
 import java.util.Arrays;
 
 /**
- * Gerencia o cadastro, a busca e a consulta de resumos.
+ * Gerencia o cadastro, a busca e a consulta de resumos,
+ * relaciona diretamente com a classe Resumo.
  */
 public class RegistroResumos {
     /**
-     * Lista de resumos cadastrados(objetos).
+     * Lista de resumos cadastrados(array de objetos).
      */
     private Resumo[] resumosO;
     /**
-     * Indice da próxima posição para adicionar um resumo.
+     * Indice da próxima posição para adicionar um resumo(movimento circular dentro do array).
      */
     private int id = 0;
     /**
@@ -21,10 +22,10 @@ public class RegistroResumos {
         this.resumosO = new Resumo[qResumos];
     }
     /**
-     * Verifica se já existe um resumo com o tema informado.
+     * Verifica se já existe um resumo com o tema informado pelo usuario.
      *
-     * @param tema tema a ser procurado.
-     * @return se o tema já estiver cadastrado retorna true, false caso contrario.
+     * @param tema tema a ser procurado no array.
+     * @return se o tema já estiver cadastrado retorna true, caso contrario retornara falso.
      */
 
     public boolean temResumo(String tema){
@@ -52,9 +53,9 @@ public class RegistroResumos {
         }
     }
     /**
-     * Obtém os temas e conteúdos dos resumos cadastrados.
+     * Pega os temas e conteúdos dos resumos cadastrados.
      *
-     * @return um textos contendo o tema e o conteúdo de cada resumo.
+     * @return um texto contendo o tema e o conteúdo de cada resumo(no formato tema: resumo).
      */
 
     public String[] pegaResumos(){
@@ -80,6 +81,11 @@ public class RegistroResumos {
     }
     /**
      * Gera uma representação textual dos resumos cadastrados.
+     *
+     *modelo:
+     *
+     * - N resumo(s) cadastrado(s)
+     * - Tema 1 | Tema 2 | Tema 3 ... Tema N
      *
      * @return texto contendo a quantidade de resumos e seus temas.
      */
